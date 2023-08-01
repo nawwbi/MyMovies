@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class CustomAdapter extends ArrayAdapter {
@@ -43,22 +45,22 @@ public class CustomAdapter extends ArrayAdapter {
         tvGenre.setText(currentMovie.getGenre());
         tvYear.setText(currentMovie.getYear()+ "");
 
-        int img = 0;
+        String img = "";
         String stringRating = currentMovie.getRating();
         if (stringRating.equalsIgnoreCase("G")){
-            img = R.drawable.rating_g;
+            img = "https://images.immediate.co.uk/production/volatile/sites/28/2019/02/16277-28797ce.jpg?quality=90&webp=true&fit=584,471";
         } else if (stringRating.equalsIgnoreCase("PG")) {
-            img = R.drawable.rating_pg;
+            img = "https://images.immediate.co.uk/production/volatile/sites/28/2019/02/16278-28797ce.jpg?quality=90&webp=true&fit=584,471";
         } else if (stringRating.equalsIgnoreCase("PG13")){
-            img = R.drawable.rating_pg13;
+            img = "https://images.immediate.co.uk/production/volatile/sites/28/2019/02/16280-8d5bdb7.jpg?quality=90&webp=true&fit=320,320";
         } else if (stringRating.equalsIgnoreCase("NC16")){
-            img = R.drawable.rating_nc16;
+            img = "https://images.immediate.co.uk/production/volatile/sites/28/2019/02/16281-8d5bdb7.jpg?quality=90&webp=true&fit=490,490";
         } else if (stringRating.equalsIgnoreCase("M18")) {
-            img = R.drawable.rating_m18;
+            img = "https://images.immediate.co.uk/production/volatile/sites/28/2019/02/16282-05127b2.jpg?quality=90&webp=true&fit=300,300";
         } else {
-            img = R.drawable.rating_r21;
+            img = "https://images.immediate.co.uk/production/volatile/sites/28/2019/02/16283-05127b2.jpg?quality=90&webp=true&fit=515,424";
         }
-        ivRating.setImageResource(img);
+        Picasso.with(parent_context).load(img).into(ivRating);
 
         return rowView;
     }
