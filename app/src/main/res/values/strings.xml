@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">My Movies</string>
+
+    <string name="textViewTitle">Movie Title</string>
+    <string name="textViewGenre">Genre</string>
+    <string name="textViewYear">Year</string>
+    <string name="textViewRating">Rating</string>
+    <string name="textViewId">Movie ID</string>
+
+    <string name="editTextTitle">Enter movie title here</string>
+    <string name="editTextGenre">Enter genre here</string>
+    <string name="editTextYear">Enter year of release here</string>
+    <string name="editTextId">Enter movie ID</string>
+
+    <string-array name="spinnerRating">
+        <item>G</item>
+        <item>PG</item>
+        <item>PG13</item>
+        <item>NC16</item>
+        <item>M18</item>
+        <item>R21</item>
+    </string-array>
+
+    <string name="buttonInsert">INSERT</string>
+    <string name="buttonShow">SHOW LIST</string>
+
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
+    <string name="cancel">CANCEL</string>
+
+</resources>
