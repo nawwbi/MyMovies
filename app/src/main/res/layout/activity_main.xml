@@ -8,50 +8,41 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewTitle"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/textViewTitle" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editTextTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/editTextTitle"
-        android:inputType="text"
-        android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/textViewTitle" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textViewGenre"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/textViewGenre" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editTextGenre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/editTextGenre"
-        android:inputType="text"
-        android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/textViewGenre" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textViewYear"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/textViewYear" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editTextYear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/editTextYear"
-        android:inputType="number"
-        android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/textViewYear" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textViewRating"
@@ -72,6 +63,7 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/Widget.Material3.Button"
             android:id="@+id/buttonInsert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,6 +71,7 @@
             android:text="@string/buttonInsert" />
 
         <Button
+            style="@style/Widget.Material3.Button.TonalButton"
             android:id="@+id/buttonShow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

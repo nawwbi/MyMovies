@@ -27,5 +27,6 @@
     <string name="update">UPDATE</string>
     <string name="delete">DELETE</string>
     <string name="cancel">CANCEL</string>
+    <string name="backButton">Back to Home</string>
 
 </resources>

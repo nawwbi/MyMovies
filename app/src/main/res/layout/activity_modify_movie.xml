@@ -8,66 +8,54 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/movieId"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/textViewId" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/movieIdInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:enabled="false"
-        android:hint="@string/editTextId"
-        android:inputType="text"
-        android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/movieIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="text"
+            android:hint="@string/textViewId" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/title"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/textViewTitle" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/titleInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/editTextTitle"
-        android:inputType="text"
-        android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/textViewTitle" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/genre"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/textViewGenre" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/genreInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/editTextGenre"
-        android:inputType="text"
-        android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/genreInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/textViewGenre" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/year"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/textViewYear" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/yearInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/editTextYear"
-        android:inputType="text"
-        android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/yearInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/textViewYear" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/rating"
@@ -88,6 +76,7 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/Widget.Material3.Button"
             android:id="@+id/update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,6 +84,7 @@
             android:text="@string/update" />
 
         <Button
+            style="@style/Widget.Material3.Button.TonalButton"
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,6 +93,7 @@
     </LinearLayout>
 
     <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:id="@+id/cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

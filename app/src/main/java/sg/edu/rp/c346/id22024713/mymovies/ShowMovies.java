@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ToggleButton;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 public class ShowMovies extends AppCompatActivity {
 
     ListView lvMovies;
-    ToggleButton tb;
+    Button tb1, tb2, btnBack;
     CustomAdapter adapter;
     ArrayList<Movie> data;
 
@@ -22,7 +23,9 @@ public class ShowMovies extends AppCompatActivity {
         setContentView(R.layout.activity_show_movies);
 
         lvMovies = findViewById(R.id.listView);
-        tb = findViewById(R.id.toggleButton);
+        tb1 = findViewById(R.id.toggle1);
+        tb2 = findViewById(R.id.toggle2);
+        btnBack = findViewById(R.id.buttonBack);
         data = new ArrayList<>();
 
         DBHelper db = new DBHelper(ShowMovies.this);
@@ -39,15 +42,20 @@ public class ShowMovies extends AppCompatActivity {
             startActivity(intent);
         });
 
-        tb.setOnClickListener(v -> {
-            if (tb.isChecked()){
-                adapter = new CustomAdapter(ShowMovies.this, R.layout.row, db.getFilteredMovies());
-            } else {
-                adapter = new CustomAdapter(ShowMovies.this, R.layout.row, db.getMovies());
-            }
+        tb1.setOnClickListener(v -> {
+            adapter = new CustomAdapter(ShowMovies.this, R.layout.row, db.getMovies());
             lvMovies.setAdapter(adapter);
             adapter.notifyDataSetChanged();
         });
 
+        tb2.setOnClickListener(v -> {
+            adapter = new CustomAdapter(ShowMovies.this, R.layout.row, db.getFilteredMovies());
+            lvMovies.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
+        });
+
+        btnBack.setOnClickListener(v -> {
+            finish();
+        });
     }
 }
